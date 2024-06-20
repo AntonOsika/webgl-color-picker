@@ -5,7 +5,7 @@ import { ChromePicker } from "react-color";
 const Index = () => {
   const [color, setColor] = useState("#fff");
 
-  const handleChangeComplete = (color) => {
+  const handleChange = (color) => {
     setColor(color.hex);
   };
 
@@ -14,7 +14,7 @@ const Index = () => {
       <VStack spacing={4}>
         <Text fontSize="2xl">WebGL Color Picker</Text>
         <Text>Select a color from the picker below:</Text>
-        <ChromePicker color={color} onChangeComplete={handleChangeComplete} />
+        <ChromePicker color={color} onChange={handleChange} />
         <Box width="100px" height="100px" bg={color} border="1px solid #000" />
       </VStack>
     </Container>
