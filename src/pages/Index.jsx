@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Container, VStack, Text, Box } from "@chakra-ui/react";
+
 
 const Index = () => {
   const [color, setColor] = useState("#fff");
 
-  useEffect(() => {
-    setColor("#ffffff");
-  }, []);
+  
 
   const handleTouchMove = (event) => {
     event.preventDefault();
